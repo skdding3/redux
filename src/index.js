@@ -1,10 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import store from "./redux/store";
+import { addTodo } from "./redux/actions";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+store.subscribe(() => {
+  console.log(store.getState());
+});
+
+// console.log(store);
+
+store.dispatch(addTodo("coding"));
+store.dispatch(addTodo("read book"));
+store.dispatch(addTodo("eat"));
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App />

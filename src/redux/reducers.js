@@ -1,11 +1,11 @@
-import { ADD_TODO } from "./action";
+import { ADD_TODO } from "./actions";
 
 // state
 // ['coding', 'lunch']
 
 const initialState = [];
 
-function todoApp(previousState = initialState, action) {
+export function todoApp(previousState = initialState, action) {
   // 초기 값을 설정해주는 부분
   // if (previousState === undefined) {
   //   return [];
