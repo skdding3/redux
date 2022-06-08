@@ -13,6 +13,7 @@ store.subscribe(() => {
 // console.log(store);
 store.dispatch(addTodo("할 일"));
 store.dispatch(completeTodo(0));
+store.dispatch(completeTodo());
 
 // store.dispatch(addTodo("coding"));
 // store.dispatch(addTodo("read book"));
