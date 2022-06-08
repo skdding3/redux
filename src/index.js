@@ -4,17 +4,19 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import store from "./redux/store";
-import { addTodo } from "./redux/actions";
+import { addTodo, completeTodo } from "./redux/actions";
 
 store.subscribe(() => {
   console.log(store.getState());
 });
 
 // console.log(store);
+store.dispatch(addTodo("할 일"));
+store.dispatch(completeTodo(0));
 
-store.dispatch(addTodo("coding"));
-store.dispatch(addTodo("read book"));
-store.dispatch(addTodo("eat"));
+// store.dispatch(addTodo("coding"));
+// store.dispatch(addTodo("read book"));
+// store.dispatch(addTodo("eat"));
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
